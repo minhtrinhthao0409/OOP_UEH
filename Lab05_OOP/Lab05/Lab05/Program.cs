@@ -379,7 +379,8 @@ namespace Lab05
                 }
 
                     #endregion
-                    Console.ReadLine();
+
+            Console.ReadLine();
         }
     }
 }
