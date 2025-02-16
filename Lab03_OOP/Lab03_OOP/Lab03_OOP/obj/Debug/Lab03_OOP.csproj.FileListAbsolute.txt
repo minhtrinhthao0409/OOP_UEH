@@ -1,0 +1,14 @@
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\bin\Debug\Lab03_OOP.exe.config
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\bin\Debug\Lab03_OOP.exe
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\bin\Debug\Lab03_OOP.pdb
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.exe
+C:\Users\Lenovo\source\repos\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.pdb
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.csproj.AssemblyReference.cache
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.exe
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\obj\Debug\Lab03_OOP.pdb
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\bin\Debug\Lab03_OOP.exe.config
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\bin\Debug\Lab03_OOP.exe
+C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\Lab03_OOP\Lab03_OOP\Lab03_OOP\bin\Debug\Lab03_OOP.pdb
