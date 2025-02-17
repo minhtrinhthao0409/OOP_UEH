@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab05
 {
-    interface IVector
+    interface IVector : ICloneable, IComparable<IVector>
     {
         void ShowInfo();
         string Print();
@@ -34,6 +34,10 @@ namespace Lab05
             this.X = x;
             this.Y = y;
         }
+
+        public object Clone() => new Vector2D(X, Y);
+
+        public int CompareTo(IVector other) => Length().CompareTo(other.Length());
 
         public void ShowInfo()
         {
@@ -100,7 +104,13 @@ namespace Lab05
         }
 
         public IVector CrossProduct(IVector vt2) => throw new NotSupportedException("Cross product is not defined for 2D vectors.");
-        
+
+        public Vector3D ConvertToVector3D()
+        {
+            Vector2D clone = (Vector2D)Clone();
+            return new Vector3D(clone.X, clone.Y, 0);
+        }
+
     }
 
     class Vector3D : IVector
@@ -119,6 +129,10 @@ namespace Lab05
             this.Y = y;
             this.Z = z;
         }
+
+        public object Clone() => new Vector3D(X, Y, Z);
+
+        public int CompareTo(IVector other) => Length().CompareTo(other.Length());
 
         public void ShowInfo()
         {
@@ -198,6 +212,8 @@ namespace Lab05
             throw new InvalidOperationException("Cannot calculate cross product with non-Vector3D."); 
 
         }
+
+        
     }
 
 
@@ -215,11 +231,11 @@ namespace Lab05
             {
                 if (i % 2 == 0)
                 {
-                    vectors.Add(new Vector2D(rnd.NextDouble() * 10, rnd.NextDouble() * 10));
+                    vectors.Add(new Vector2D( Math.Round((double)rnd.NextDouble() * 10, 4), Math.Round((double)rnd.NextDouble() * 10, 4)));
                 }
                 else
                 {
-                    vectors.Add(new Vector3D(rnd.NextDouble() * 10, rnd.NextDouble() * 10, rnd.NextDouble() * 10));
+                    vectors.Add(new Vector3D(Math.Round((double)rnd.NextDouble() * 10, 4), Math.Round((double)rnd.NextDouble() * 10, 4), Math.Round((double)rnd.NextDouble() * 10, 4)));
                 }
             }
 
@@ -331,7 +347,7 @@ namespace Lab05
             #region Normalize
             foreach (IVector vtor in vectors)
             {
-                Console.WriteLine($"Normalize of vector {vtor.Print()} = {vtor.Normalize()}");
+                Console.WriteLine($"Normalize of vector {vtor.Print()} = {vtor.Normalize().Print()}");
             }
 
             #endregion
@@ -367,7 +383,7 @@ namespace Lab05
                     {
 
                         IVector resultAdd = vectors[i].CrossProduct(vectors[j]);
-                        string str_result = vectors[i].Print() + " + " + vectors[j].Print() + " = " + resultAdd.Print();
+                        string str_result = vectors[i].Print() + " x " + vectors[j].Print() + " = " + resultAdd.Print();
                         Console.WriteLine("\t- " + str_result);
 
                     }
