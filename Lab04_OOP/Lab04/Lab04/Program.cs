@@ -52,8 +52,8 @@ namespace Lab04
     
     class Vector2D : AVector
     {
-        private float x;
-        private float y;
+        protected float x;
+        protected float y;
 
         public float X { get => x; set => x = value; }
         public float Y { get => y; set => y = value; }
@@ -149,18 +149,13 @@ namespace Lab04
 
     class Vector3D : AVector
     {
-        private float x;
-        private float y;
+        
         private float z;
-
-        public float X { get => x; set => x = value; }
-        public float Y { get => y; set => y = value; }
+        
         public float Z { get => z; set => z = value; }
 
-        public Vector3D(float x, float y, float z)
-        {
-            this.X = x;
-            this.Y= y;
+        public Vector3D(float x, float y, float z) 
+            
             this.Z = z;
         }
 
