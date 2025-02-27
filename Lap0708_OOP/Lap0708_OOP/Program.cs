@@ -11,21 +11,25 @@ namespace Lap0708_OOP
         private double x;
         private double y;
         private static int count = -1;
-        
+        private char id;
+
         public double X { get => x; set => x = value; }
         public double Y { get => y; set => y = value; }
+        public char Id { get => id; set => id = value; }
 
         public Point(double x, double y)
         {
             this.x = x;
             this.y = y;
             count++;
+            char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            id = alpha[count];
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-            return $"{alpha[count]}({this.x},{this.y})";
+            
+            return $"{id}({this.x},{this.y})";
         }
 
         public static double Distance(Point a, Point b)
@@ -48,7 +52,7 @@ namespace Lap0708_OOP
 
         public string ToString()
         {
-            char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            
             string str = "";
             for (int i = 0; i < points.Count; i++)
             {
@@ -56,7 +60,7 @@ namespace Lap0708_OOP
                 {
                     str += "{";
                 }
-                str += $"{alpha[i]}({points[i].X},{points[i].Y})";
+                str += $"{points[i].Id}({points[i].X},{points[i].Y})";
                 if (i != points.Count - 1)
                 {
                     str += ", ";
@@ -192,6 +196,7 @@ namespace Lap0708_OOP
                 Console.WriteLine(result[i].ToString());
             }
 
+            Console.ReadKey();
 
 
         }
