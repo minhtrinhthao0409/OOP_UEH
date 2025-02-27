@@ -37,12 +37,12 @@ namespace Lap0708_OOP
 
     class Cluster
     {
-        public List<Point> lstPoint = new List<Point>();
+        private List<Point> points = new List<Point>();
 
 
-        public Cluster(List<Point> lstPoint)
+        public Cluster(List<Point> points)
         {
-            this.lstPoint = lstPoint;
+            this.points = points;
 
         }
 
@@ -50,20 +50,59 @@ namespace Lap0708_OOP
         {
             char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
             string str = "";
-            for (int i = 0; i < lstPoint.Count; i++)
+            for (int i = 0; i < points.Count; i++)
             {
                 if (i == 0)
                 {
                     str += "{";
                 }
-                str += $"{alpha[i]}({lstPoint[i].X},{lstPoint[i].Y})";
-                if (i != lstPoint.Count - 1)
+                str += $"{alpha[i]}({points[i].X},{points[i].Y})";
+                if (i != points.Count - 1)
                 {
                     str += ", ";
                 }
             }
             return str + "}";
         }
+
+
+        public static double Distance(Cluster a, Cluster b)
+        {
+            if (a.points.Count == 0 || b.points.Count == 0)
+            {
+                throw new ArgumentException("Cụm không được rỗng");
+            }
+
+            double minDistance = double.MaxValue;
+
+
+            foreach (Point p1 in a.points)
+            {
+                foreach (Point p2 in b.points)
+                {
+                    double dist = Point.Distance(p1, p2);
+                    if (dist < minDistance)
+                    {
+                        minDistance = dist;
+                    }
+                }
+            }
+
+            return minDistance;
+        }
+
+        public static Cluster operator +(Cluster a, Cluster b)
+        {
+            List<Point> aug = new List<Point>(a.points);
+            foreach (Point p in b.points)
+            {
+                aug.Add(p);
+            }
+
+            return new Cluster(aug);
+            
+        }
+
     }
 
     class Program
@@ -84,8 +123,15 @@ namespace Lap0708_OOP
             Console.WriteLine(Point.Distance(A, B));
             List<Point> lst = new List<Point>{ A, B, C };
             Cluster cluster1 = new Cluster(lst);
+
+            Cluster cluster2 = new Cluster(lst);
             Console.WriteLine("Các điểm có trong cluster 1:");
             Console.WriteLine(cluster1.ToString());
+
+            // Hợp 2 cluster
+            Cluster cluster3 = cluster1 + cluster2;
+            Console.WriteLine(cluster3.ToString());
+
 
 
         }
