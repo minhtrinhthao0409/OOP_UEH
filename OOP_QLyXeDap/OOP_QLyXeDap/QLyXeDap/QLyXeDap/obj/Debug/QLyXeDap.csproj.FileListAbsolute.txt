@@ -1,0 +1,14 @@
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\bin\Debug\QLyXeDap.exe.config
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\bin\Debug\QLyXeDap.exe
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\bin\Debug\QLyXeDap.pdb
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.exe
+C:\Users\Administrator\Documents\GitHub\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.pdb
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.csproj.AssemblyReference.cache
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.csproj.CoreCompileInputs.cache
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.exe
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\obj\Debug\QLyXeDap.pdb
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\bin\Debug\QLyXeDap.exe.config
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\bin\Debug\QLyXeDap.exe
+D:\GitHub\OOP_QLyXeDap\OOP_QLyXeDap\QLyXeDap\QLyXeDap\bin\Debug\QLyXeDap.pdb
