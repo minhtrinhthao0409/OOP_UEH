@@ -10,7 +10,7 @@ namespace Lap0708_OOP
     {
         private double x;
         private double y;
-        public static int count = -1;
+        private static int count = -1;
         
         public double X { get => x; set => x = value; }
         public double Y { get => y; set => y = value; }
@@ -42,7 +42,7 @@ namespace Lap0708_OOP
 
         public Cluster(List<Point> points)
         {
-            this.points = points;
+            this.points = new List<Point>(points);
 
         }
 
@@ -103,7 +103,52 @@ namespace Lap0708_OOP
             
         }
 
+        public static List<Cluster> HierarchicalClustering(List<Point> points)
+        {
+            if (points == null || points.Count == 0)
+                return new List<Cluster>();
+
+            // Bắt đầu với mỗi điểm là một cụm riêng
+            List<Cluster> clusters = new List<Cluster>();
+            for (int i = 0; i < points.Count; i++)
+            {
+                List<Point> singlePointList = new List<Point> { points[i] };
+                clusters.Add(new Cluster(singlePointList));
+            }
+
+            while (clusters.Count > 1)
+            {
+                double minDist = double.MaxValue;
+                Cluster cluster1 = null;
+                Cluster cluster2 = null;
+
+                // Tìm cặp cụm gần nhau nhất
+                for (int i = 0; i < clusters.Count - 1; i++)
+                {
+                    for (int j = i + 1; j < clusters.Count; j++)
+                    {
+                        double dist = Distance(clusters[i], clusters[j]);
+                        if (dist < minDist)
+                        {
+                            minDist = dist;
+                            cluster1 = clusters[i];
+                            cluster2 = clusters[j];
+                        }
+                    }
+                }
+
+                // Hợp hai cụm gần nhất
+                Cluster merged = cluster1 + cluster2;
+                clusters.Remove(cluster1);
+                clusters.Remove(cluster2);
+                clusters.Add(merged);
+            }
+
+            return clusters;
+        }
     }
+
+
 
     class Program
     {
