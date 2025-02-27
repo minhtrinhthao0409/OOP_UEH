@@ -1,7 +1,0 @@
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\obj\Debug\Lab02.csproj.AssemblyReference.cache
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\bin\Debug\Lab02.exe.config
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\bin\Debug\Lab02.exe
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\bin\Debug\Lab02.pdb
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\obj\Debug\Lab02.exe
-C:\Users\Lenovo\OneDrive\Tài liệu-macbook của Minh\GitHub\LAB02_OOP\Lab02\Lab02\obj\Debug\Lab02.pdb
