@@ -161,21 +161,36 @@ namespace Lap0708_OOP
             Point B = new Point(3, 4);
             Console.WriteLine(B.ToString());
             Point C = new Point(5, 6);
-            Console.WriteLine(B.ToString());
+            Console.WriteLine(C.ToString());
+            Point D = new Point(7, 10);
+            Console.WriteLine(D.ToString());
             Console.WriteLine();
 
             Console.WriteLine("Khoảng cách giữa 2 điểm A và B theo công thức Euclidean:");
             Console.WriteLine(Point.Distance(A, B));
-            List<Point> lst = new List<Point>{ A, B, C };
-            Cluster cluster1 = new Cluster(lst);
+            // Cụm 1
+            List<Point> lst1 = new List<Point>{ A, B, C };
+            Cluster cluster1 = new Cluster(lst1);
+            // Cụm 2
+            List<Point> lst2 = new List<Point> { A, C, D };
+            Cluster cluster2 = new Cluster(lst2);
 
-            Cluster cluster2 = new Cluster(lst);
             Console.WriteLine("Các điểm có trong cluster 1:");
             Console.WriteLine(cluster1.ToString());
-
+            Console.WriteLine("Các điểm có trong cluster 2:");
+            Console.WriteLine(cluster2.ToString());
             // Hợp 2 cluster
             Cluster cluster3 = cluster1 + cluster2;
+            Console.WriteLine("Các điểm có trong cluster 3:");
             Console.WriteLine(cluster3.ToString());
+            // Phân cụm hierarchical clustering
+            List<Point> allPoints = new List<Point> { A, B, C, D };
+            Console.WriteLine("Phân cụm hierarchical clustering:");
+            List<Cluster> result = Cluster.HierarchicalClustering(allPoints);
+            for (int i = 0; i < result.Count; i++)
+            {
+                Console.WriteLine(result[i].ToString());
+            }
 
 
 
